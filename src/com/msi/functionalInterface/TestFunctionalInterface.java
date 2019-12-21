@@ -12,11 +12,11 @@ public interface TestFunctionalInterface {
 	}
 	
 	public static void printHelloWorldFromStaticMethod() {
-		System.out.print("Hello world from static method");
+		System.out.println("Hello world from static method");
 	}
 	
 	public static void printHiFromStaticMethod() {
-		System.out.print("Hi from static method");
+		System.out.println("Hi from static method");
 	}
 	
 	
