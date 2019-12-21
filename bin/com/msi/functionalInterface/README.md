@@ -5,6 +5,9 @@
 3. More than 1 static methods
 4. Let us override java.lang.Object ckass methods
 
+### What functional interface can't contain?
+1. Concrete method
+
 ### Purpose?
 
 1. To enable functional programming in java.
