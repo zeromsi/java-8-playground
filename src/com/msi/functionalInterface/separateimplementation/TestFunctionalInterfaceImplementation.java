@@ -1,4 +1,4 @@
-package com.msi.functionalInterface;
+package com.msi.functionalInterface.separateimplementation;
 
 public class TestFunctionalInterfaceImplementation implements TestFunctionalInterface{
 

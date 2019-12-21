@@ -22,3 +22,12 @@ In functional programming we can send another function as method parameter.
 ### How to enable a functional interface?
 
 By using @FunctionalInterface annotation
+
+
+### How many ways can we implement an Interface in Java 8?
+
+1. By writing separate Implementation class
+2. By annonymous inner class 
+3. By lambda expression
+3. By Method references
+

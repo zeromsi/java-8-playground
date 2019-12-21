@@ -1,5 +1,6 @@
-package com.msi.functionalInterface;
+package com.msi.functionalInterface.separateimplementation;
 
+@FunctionalInterface
 public interface TestFunctionalInterface {
 	public abstract void printSomething();
 	
