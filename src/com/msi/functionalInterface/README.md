@@ -9,11 +9,13 @@
 
 1. To enable functional programming in java.
 2. To enable lambda expression
+3. To use method referencing 
 
 #### What is functional programming?
 
 In functional programming we can send another function as method parameter.
 
 
+### How to enable a functional interface?
 
-
+By using @FunctionalInterface annotation
