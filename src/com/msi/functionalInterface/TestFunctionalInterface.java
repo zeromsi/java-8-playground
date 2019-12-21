@@ -10,4 +10,14 @@ public interface TestFunctionalInterface {
 	public default void printHi() {
 		System.out.println("Hi");
 	}
+	
+	public static void printHelloWorldFromStaticMethod() {
+		System.out.print("Hello world from static method");
+	}
+	
+	public static void printHiFromStaticMethod() {
+		System.out.print("Hi from static method");
+	}
+	
+	
 }
