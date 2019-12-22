@@ -20,5 +20,4 @@ public interface TestFunctionalInterface {
 		System.out.println("Hi from static method");
 	}
 	
-	
 }
