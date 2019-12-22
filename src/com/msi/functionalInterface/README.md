@@ -31,3 +31,9 @@ By using @FunctionalInterface annotation
 3. By lambda expression
 3. By Method references
 
+
+### Something about Method referencing
+
+1. Operator ``::``
+2. Signature must be same (name is not mandatory)
+3. Implementation of method must be static
