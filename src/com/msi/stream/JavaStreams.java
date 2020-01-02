@@ -56,8 +56,9 @@ public class JavaStreams {
 			.filter(x -> x.startsWith("a"))
 			.forEach(System.out::println);
 			
-		// 8. Stream rows from text file, sort, filter, and print
-		Stream<String> bands = Files.lines(Paths.get("bands.txt"));
+		 Path currentDir = Paths.get("."); // currentDir = "."
+		  Path fullPath = currentDir.toAbsolutePath(); 
+		Stream<String> bands = Files.lines(currentDir.resolve("src/bands.txt"));
 		bands
 			.sorted()
 			.filter(x -> x.length() > 13)
@@ -65,13 +66,13 @@ public class JavaStreams {
 		bands.close();
 		
 		// 9. Stream rows from text file and save to List
-		List<String> bands2 = Files.lines(Paths.get("bands.txt"))
+		List<String> bands2 = Files.lines(currentDir.resolve("src/bands.txt"))
 			.filter(x -> x.contains("jit"))
 			.collect(Collectors.toList());
 		bands2.forEach(x -> System.out.println(x));
 		
 		// 10. Stream rows from CSV file and count
-		Stream<String> rows1 = Files.lines(Paths.get("data.txt"));
+		Stream<String> rows1 = Files.lines(currentDir.resolve("src/data.txt"));
 		int rowCount = (int)rows1
 			.map(x -> x.split(","))
             .filter(x -> x.length == 3)
@@ -80,7 +81,7 @@ public class JavaStreams {
 		rows1.close();
 		
 		// 11. Stream rows from CSV file, parse data from rows
-		Stream<String> rows2 = Files.lines(Paths.get("data.txt"));
+		Stream<String> rows2 = Files.lines(currentDir.resolve("src/data.txt"));
 		rows2
 			.map(x -> x.split(","))
             .filter(x -> x.length == 3)
@@ -89,7 +90,7 @@ public class JavaStreams {
 		rows2.close();
 		
 		// 12. Stream rows from CSV file, store fields in HashMap
-		Stream<String> rows3 = Files.lines(Paths.get("data.txt"));
+		Stream<String> rows3 = Files.lines(currentDir.resolve("src/data.txt"));
 		Map<String, Integer> map = new HashMap<>();
 		map = rows3
 			.map(x -> x.split(","))
