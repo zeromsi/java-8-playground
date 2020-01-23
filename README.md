@@ -42,7 +42,7 @@ By using @FunctionalInterface annotation
 
 #### There are few functional interfaces namely Consumer, Supplier, Predicate provided by Java 8.
 
-``` [Read more](https://medium.com/swlh/understanding-java-8s-consumer-supplier-predicate-and-function-c1889b9423d) ```
+[Read more](https://medium.com/swlh/understanding-java-8s-consumer-supplier-predicate-and-function-c1889b9423d)
 
 ### Consumer
 
