@@ -40,3 +40,17 @@ By using @FunctionalInterface annotation
 3. Implementation of method must be static
 
 
+#### There are few functional interfaces namely Consumer, Supplier, Predicate provided by Java 8.
+
+### Consumer
+
+- A Consumer is a functional interface that accepts a single input and returns no output.
+- Consumer interface has two methods:
+
+```
+void accept(T t);
+default Consumer<T> andThen(Consumer<? super T> after);
+```
+- The ```accept``` method is the Single Abstract Method (SAM) which accepts a single argument of type T.
+- ```andThen``` is a default method used for composition.
+
