@@ -52,5 +52,42 @@ void accept(T t);
 default Consumer<T> andThen(Consumer<? super T> after);
 ```
 - The ```accept``` method is the Single Abstract Method (SAM) which accepts a single argument of type T.
-- ```andThen``` is a default method used for composition.
+- ```andThen``` is a default method used for composition or chaining.
+- ``` andThen``` takes a consumer as input and returns a consumer.
+
+#### ``` accept ``` method example
+
+
+```
+	public static void printUsingAcceptMethod(){
+		// Create a function that prints what ever is passed through accept method of consumer interface.
+	    Consumer<String> printConsumer = t -> System.out.println(t);
+	    Stream<String> cities = Stream.of("Sydney", "Dhaka", "New York", "London");
+	    // foreach method of stream interface takes a consumer through parameter.
+	    cities.forEach(printConsumer);
+	}
+
+```
+
+### ```andThen``` method example.
+
+``` 
+public void printUsingAndTherMethod(){
+    List<String> cities = Arrays.asList("Sydney", "Dhaka", "New York", "London");
+
+// This consumer converts an string list into upper case.
+    Consumer<List<String>> upperCaseConsumer = list -> {
+        for(int i=0; i< list.size(); i++){
+            list.set(i, list.get(i).toUpperCase());
+        }
+    };
+    
+// This Consumer print list of string 
+    Consumer<List<String>> printConsumer = list -> list.stream().forEach(System.out::println);
+
+// Chaining consumers using andThen
+    upperCaseConsumer.andThen(printConsumer).accept(cities);
+}
+
+``` 
 
