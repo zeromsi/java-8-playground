@@ -91,7 +91,42 @@ public void printUsingAndTherMethod(){
     upperCaseConsumer.andThen(printConsumer).accept(cities);
 }
 
-``` 
+```
+
+### Predicate
+
+In mathematics, a predicate is commonly understood to be a boolean-valued function ```P: X? {true, false}```, called the predicate on X. Informally, a strong. It can be thought of as an operator or function that returns a value that is either true or false.
+
+In Java 8, Predicate is a functional interface and can therefore be used as the assignment target for a lambda expression or method reference. So, where you think, we can use these true/false returning functions in day to day programming? I will say you can use predicates anywhere where you need to evaluate a condition on group/collection of similar objects such that evaluation can result either in true or false.
+
+```
+public class Main {
+
+	public static void main(String[] args) {
+	List<Integer> values=Arrays.asList(1,2,3,4,5,6,7,8,9,10);
+	Main main=new Main();
+	List<Integer> tempList=main.mapResult(values, (val)->val%2==0);
+	
+	tempList.forEach(temp->{
+		System.out.println(temp);
+	});
+	
+	}
+	
+	public List<Integer>  mapResult(List<Integer> values,Predicate<Integer> condition){
+		List<Integer>  tempList=new ArrayList<>();
+		values.forEach(val->{
+			if(condition.test(val)) {
+				tempList.add(val);
+			}
+		});
+		return tempList;
+	}
+
+}
+
+```
+
 
 
 
